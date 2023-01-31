@@ -1,9 +1,11 @@
-import './globals.css'
+import "./globals.css";
+import Link from "next/link";
+import style from "./layout.module.scss";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -13,8 +15,21 @@ export default function RootLayout({
       */}
       <head />
       <body>
-
-        {children}</body>
+        <div>
+          <div className={style.nav}>
+            <div className="link">
+              <Link href={"/blog"}>Blog</Link>
+            </div>
+            <div className="link">
+              <Link href={"/about"}>About</Link>
+            </div>
+            <div className="link">
+              <Link href={"/account"}>Account</Link>
+            </div>
+          </div>
+        </div>
+        <div>{children}</div>
+      </body>
     </html>
-  )
+  );
 }
