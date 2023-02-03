@@ -2,7 +2,10 @@
   display: flex;
   width: 60%;
   margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 1rem;
   .button {
     color: white;
     text-decoration: none;
