@@ -1,1 +1,1 @@
-export let counter ={value: 0};
+export const counter = { value: 0 };
