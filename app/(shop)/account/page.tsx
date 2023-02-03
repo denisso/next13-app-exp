@@ -1,12 +1,7 @@
-import Link from "next/link";
+import { Page } from "@/components/Page";
 
 export default function Account() {
   return (
-    <section>
-      <div>Account</div>
-      <div>
-        <Link href={"/"}>Goto Home</Link>
-      </div>
-    </section>
+    <Page header={"Page Account"}/>
   );
 }

@@ -1,11 +1,7 @@
-import Link from "next/link";
+import { Page } from "@/components/Page";
 
 export default function Home() {
   return (
-    <>
-      <div>
-          Home Page Component Content
-      </div>
-    </>
+    <Page header={"Page Home"}/>
   );
 }

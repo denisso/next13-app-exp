@@ -3,3 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-size: 16px;
+}
+
+a, a:visited, a:active, a:link  {
+	text-decoration: none;
+}
+

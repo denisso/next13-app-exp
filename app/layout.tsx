@@ -1,7 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
-import style from "./layout.module.scss";
-
+import styles from "./layout.module.scss";
+import { Nav } from "@/components/Nav";
 export default function RootLayout({
   children,
 }: {
@@ -15,20 +15,11 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <div>
-          <div className={style.nav}>
-            <div className="link">
-              <Link href={"/blog"}>Blog</Link>
-            </div>
-            <div className="link">
-              <Link href={"/about"}>About</Link>
-            </div>
-            <div className="link">
-              <Link href={"/account"}>Account</Link>
-            </div>
-          </div>
+        <div className={styles.container}>
+          <h1>Layout Content</h1>
+          <Nav/>
+          <div>{children}</div>
         </div>
-        <div>{children}</div>
       </body>
     </html>
   );

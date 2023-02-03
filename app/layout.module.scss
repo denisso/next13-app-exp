@@ -1,13 +1,10 @@
-.main {
+.container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .header {
   display: flex;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
 }

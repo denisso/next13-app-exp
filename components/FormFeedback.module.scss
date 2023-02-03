@@ -1,0 +1,29 @@
+.button {
+  color: white;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  background-color: #007efd;
+  transition: background-color 0.1s;
+  &:hover {
+    background-color: #0066cc;
+  }
+  border: none;
+}
+.form, .formContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.form * {
+  font-size: 1.3rem;
+}
+
+.formContainer{
+  padding: 1rem;
+  border: solid;
+}
