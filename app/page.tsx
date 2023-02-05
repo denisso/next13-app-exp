@@ -1,9 +1,4 @@
-import styles from './page.module.scss'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.box}>Hello world</div>
-    </main>
-  )
+export default async function Home() {
+  return <div>Coose user</div>
 }
