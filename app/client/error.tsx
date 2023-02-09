@@ -9,7 +9,7 @@ export default function Error({
 }) {
   return (
     <div>
-      <h2>Server error</h2>
+      <h2>Client error</h2>
       <div>{error.message}</div>
     </div>
   );
