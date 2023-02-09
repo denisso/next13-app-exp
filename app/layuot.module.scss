@@ -1,0 +1,14 @@
+.nav {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  .link{
+    padding: .3rem;
+    color: white;
+    background-color: #4040BF;
+    &:hover{
+      background-color: #2D2D86;
+    }
+  }
+}

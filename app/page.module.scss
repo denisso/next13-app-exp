@@ -1,15 +1,12 @@
 .main {
   display: flex;
-  width: 60%;
-  margin: calc((100vh - 100px) / 2 - 1rem) auto;
   justify-content: center;
   padding: 1rem;
-  background-color: orange;
   .box {
     height: 100px;
     display: grid;
     place-items: center;
     padding: 1rem;
-    background-color: crimson;
+    background-color: #F0F5F5;
   }
 }
