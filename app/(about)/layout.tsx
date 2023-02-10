@@ -1,5 +1,5 @@
 import "../globals.css";
-import style from "../layout.module.scss"
+import style from "../layout.module.scss";
 export default function RootLayout({
   children,
 }: {
@@ -13,6 +13,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
+        <div style={{ textAlign: "center" }}>Next.js 13.1.6</div>
         <header className={style.box}>About Page Layout</header>
         {children}
       </body>

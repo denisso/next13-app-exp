@@ -1,10 +1,10 @@
-import '../globals.css'
-import style from "../layout.module.scss"
+import "../globals.css";
+import style from "../layout.module.scss";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -14,8 +14,10 @@ export default function RootLayout({
       */}
       <head />
       <body>
+        <div style={{ textAlign: "center" }}>Next.js 13.1.6</div>
         <header className={style.box}>Home Page Layout</header>
-        {children}</body>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
