@@ -14,7 +14,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <div style={{ textAlign: "center" }}>Next.js 13.1.6</div>
+        <div style={{ textAlign: "center" }}>Next.js 13.1.7-canary on 2023/02/10</div>
         <header className={style.box}>Home Page Layout</header>
         {children}
       </body>
