@@ -26,7 +26,7 @@ export default function Error({
             router.push(url.origin + url.pathname);
             // i want make hard navigation and invalidate cache for server component rerender
             router.refresh(); // but throw error occurred in the <Router> component, cannot be catch with global error
-            await wait(); // solution for Router error
+            // await wait(); // solution for Router error
             reset();
           }}
         >
