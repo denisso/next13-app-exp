@@ -1,5 +1,13 @@
-"use client"
+"use client";
+import React from "react";
+import styles from "../page.module.scss";
+
 export default function Page() {
-  throw Error("Custom client error")
-  return <></>;
+  const [error, setError] = React.useState(false);
+  const handleGetError = () => {
+    setError(true);
+  };
+  return (
+    <>{error ? Error() : <button onClick={handleGetError} className={styles.navItem}>get Error</button>}</>
+  );
 }

@@ -1,14 +1,20 @@
+@use "./ui.scss";
+
 .nav {
   margin: 50px auto;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  .link{
-    padding: .3rem;
+  .link {
+    padding: 0.3rem;
     color: white;
-    background-color: #4040BF;
-    &:hover{
-      background-color: #2D2D86;
+    background-color: #4040bf;
+    &:hover {
+      background-color: #2d2d86;
     }
   }
+}
+
+.navItem {
+  @extend .button;
 }

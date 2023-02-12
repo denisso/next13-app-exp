@@ -1,3 +1,5 @@
+@import "./ui.scss";
+
 .main {
   display: flex;
   justify-content: center;
@@ -9,4 +11,8 @@
     padding: 1rem;
     background-color: #F0F5F5;
   }
+}
+
+.navItem{
+  @extend .button;
 }
