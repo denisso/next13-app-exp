@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../page.module.scss";
+import styles from "./page.module.scss";
 
 const Page = ({
   searchParams,
@@ -16,9 +16,9 @@ const Page = ({
         pathname: "/server",
         query: { error: "true" },
       }}
-      legacyBehavior
+      className={styles.navItem}
     >
-      <a className={styles.navItem}>Get error</a>
+      Get error
     </Link>
   );
 };

@@ -15,14 +15,13 @@ export default function Error({
   const router = useRouter();
   return (
     <div>
-      <h2>Server error boundary work properly</h2>
+      <h2>Server error boundary</h2>
       <div>{error.message}</div>
       <div>
         <button
           className={styles.navItem}
           onClick={async () => {
             const url = new URL(window.location.href);
-
             router.push(url.origin + url.pathname);
             // i want make hard navigation and invalidate cache for server component rerender
             router.refresh(); // but throw error occurred in the <Router> component, cannot be catch with global error
