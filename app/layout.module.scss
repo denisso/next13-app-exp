@@ -1,0 +1,27 @@
+.nav {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  .link {
+    padding: 0.3rem;
+    color: white;
+    background-color: #4040bf;
+    &:hover {
+      background-color: #2d2d86;
+    }
+  }
+}
+.main {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(235, 235, 235);
+  .box {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+  }
+}

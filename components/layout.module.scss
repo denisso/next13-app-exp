@@ -1,0 +1,16 @@
+.linksBox{
+  display: flex;
+  gap: 1rem;
+  .link{
+    padding: .3rem .5rem;
+    color: white;
+    background-color: #303841;
+    &.active{
+      background: #991F00;
+    }
+  }
+}
+
+.centeredText{
+  text-align: center;
+}

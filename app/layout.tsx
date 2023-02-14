@@ -1,4 +1,6 @@
 import "./globals.css";
+import Link from "next/link";
+import styles from "./layout.module.scss";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,9 +17,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-      </head>
-      <body>{children}</body>
+      {/*
+        <head /> will contain the components returned by the nearest parent
+        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
+      */}
+      <head />
+      <body>
+        <nav className={styles.nav}>
+          <Link className={styles.link} href="/">
+            Home
+          </Link>
+          <Link className={styles.link} href="/dynamicparams-true">
+            Dynamic Params true
+          </Link>
+          <Link className={styles.link} href="/dynamicparams-false">
+            Dynamic Params false
+          </Link>
+        </nav>
+        <main className={styles.main}>
+          <div className={styles.box}>{children}</div>
+        </main>
+      </body>
     </html>
   );
 }
