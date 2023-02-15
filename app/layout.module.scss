@@ -1,17 +1,4 @@
-.nav {
-  margin: 50px auto;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  .link {
-    padding: 0.3rem;
-    color: white;
-    background-color: #4040bf;
-    &:hover {
-      background-color: #2d2d86;
-    }
-  }
-}
+
 .main {
   display: flex;
   width: 60%;
@@ -23,5 +10,40 @@
     display: grid;
     place-items: center;
     padding: 1rem;
+  }
+}
+
+.header{
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .link {
+      padding: 0.3rem;
+      color: white;
+      background-color: #4040bf;
+      &:hover {
+        background-color: #2d2d86;
+      }
+    }
+  }
+  .logo{
+    width: 30px;
+    height: 30px;
+    
+    .image{
+      fill: #4040BF;
+      width: 100%;
+      height: auto;
+      &:hover {
+        fill: #2d2d86;
+      }
+    }
   }
 }
