@@ -1,9 +1,5 @@
-import styles from './page.module.scss'
+import { Page } from "@/components/Page";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.box}>Hello world</div>
-    </main>
-  )
+export default function Shop() {
+  return <Page headerText="Home">This is content</Page>;
 }
