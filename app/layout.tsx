@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import styles from "./layout.module.scss";
+import { ClientContext } from "./ClientContext";
 
 /**
  * https://beta.nextjs.org/docs/guides/seo
@@ -44,7 +45,9 @@ export default function RootLayout({
             </div>
           </nav>
         </div>
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          <ClientContext>{children}</ClientContext>
+        </main>
       </body>
     </html>
   );

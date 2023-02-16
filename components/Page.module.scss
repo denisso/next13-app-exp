@@ -8,13 +8,22 @@
   gap: 1rem;
 }
 
-.link {
+.inputGroup{
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  border-radius: .5rem;
+  padding: 0 .5rem;
+}
+.button {
   color: white;
   text-decoration: none;
   display: grid;
   place-items: center;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   background-color: #007efd;
   transition: background-color 0.1s;
   &:hover {
