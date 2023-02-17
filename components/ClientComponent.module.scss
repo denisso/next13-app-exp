@@ -1,0 +1,16 @@
+@use "./ui.scss";
+
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input{
+  border-radius: .3rem;
+  padding: 0 .3rem;
+}
+
+.button{
+  @extend .button;
+}
