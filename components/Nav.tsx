@@ -1,25 +1,29 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import React from "react";
+import { useRouter } from "next/navigation";
 import styles from "./Nav.module.scss";
+import { Context } from "./ClientContext";
+
+const arr = ["/", ...Array.from(Array(15), (x, index) => index + 1)];
 
 export const Nav = () => {
-  const pathname = usePathname();
+  const router = useRouter();
+  const context = React.useContext(Context);
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    context?.setId(e.target.value);
+    router.push(`${window.location.origin}/${e.target.value}`);
+  };
 
   return (
     <div className={styles.nav}>
-      <div className={`${styles.link} ${pathname === "/" && styles.active}`}>
-        <Link href={"/"}>Home</Link>
-      </div>
-      <div className={`${styles.link} ${pathname === "/blog" && styles.active}`}>
-        <Link href={"/blog"}>Blog</Link>
-      </div>
-      <div className={`${styles.link} ${pathname === "/about" && styles.active}`}>
-        <Link href={"/about"}>About</Link>
-      </div>
-      <div className={`${styles.link} ${pathname === "/account" && styles.active}`}>
-        <Link href={"/account"}>Account</Link>
-      </div>
+      Choose User ID
+      <select onChange={handleChange} value={context?.id}>
+        {arr.map((e) => (
+          <option key={e}>
+            {e}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };

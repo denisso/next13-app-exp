@@ -1,17 +1,22 @@
 "use client";
 import styles from "./ClientComponent.module.scss";
-
+import { Context } from "./ClientContext";
+import React from "react";
 export const ClientComponent = function ({
-  header,
-  children,
+  id,
+  data,
 }: {
-  header: string;
-  children: React.ReactNode;
+  id: string;
+  data: { [key: string]: any };
 }) {
+  const context = React.useContext(Context);
+  React.useEffect(() => {
+    context?.setId(id);
+  });
   return (
     <div className={styles.content}>
-      <h2>{header}</h2>
-      <section>{children}</section>
+      <div>ID: {id}</div>
+      <div>{JSON.stringify(data)}</div>
     </div>
   );
 };

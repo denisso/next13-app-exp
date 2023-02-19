@@ -1,6 +1,7 @@
 import "./globals.css";
 import styles from "./layout.module.scss";
 import { Nav } from "@/components/Nav";
+import { ClientContext } from "../components/ClientContext";
 
 /**
  * https://beta.nextjs.org/docs/guides/seo
@@ -30,8 +31,10 @@ export default function RootLayout({
       <body>
         <div className={styles.container}>
           <h1>Layout Content</h1>
-          <Nav/>
-          <div>{children}</div>
+          <ClientContext>
+            <Nav />
+            <div>{children}</div>
+          </ClientContext>
         </div>
       </body>
     </html>
