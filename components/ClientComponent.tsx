@@ -7,7 +7,7 @@ export const ClientComponent = function ({
   data,
 }: {
   id: string;
-  data: { [key: string]: any };
+  data: string;
 }) {
   const context = React.useContext(Context);
   React.useEffect(() => {
@@ -16,7 +16,7 @@ export const ClientComponent = function ({
   return (
     <div className={styles.content}>
       <div>ID: {id}</div>
-      <div>{JSON.stringify(data)}</div>
+      <div>{data}</div>
     </div>
   );
 };
