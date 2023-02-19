@@ -1,4 +1,4 @@
-import "server-only";
+// import "server-only";
 
 interface IfetchData {
   (id: string): Promise<{ data: { [key: string]: any } }>;
