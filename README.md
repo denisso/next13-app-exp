@@ -1,3 +1,7 @@
+[Templates docs](https://beta.nextjs.org/docs/routing/pages-and-layouts#templates)
+
+[Online Demo](https://next13-app-exp-templates-git-templates-denisso.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
