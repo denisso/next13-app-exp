@@ -17,11 +17,10 @@ export const ClientComponent = function ({
     context?.setId(id);
   }, [context, id]);
 
-
   return (
     <div className={styles.content}>
       <div>ID: {id}</div>
-      {context?.isPending ? <Spinner/> : <div>{children}</div>}
+      {context?.isPending ? <Spinner /> : <div>{children}</div>}
     </div>
   );
 };

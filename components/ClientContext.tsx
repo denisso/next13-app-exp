@@ -2,8 +2,12 @@
 import React from "react";
 
 interface IContexte {
+  // if you did not start working from the home page, 
+  // this id will be used in the Nav component
   id: string;
   setId: (id: string) => void;
+  // await server rendering [id]/page.tsx
+  // setting in Nav, uses in ClientComponent
   isPending: boolean;
   setPending: (pending: boolean) => void;
 }
