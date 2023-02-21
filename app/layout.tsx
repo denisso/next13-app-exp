@@ -36,14 +36,14 @@ export default function RootLayout({
               target="_blank"
               href="https://beta.nextjs.org/docs/api-reference/fetch"
             >
-              Example Server Fetch
+              Example Server Fetch with custom cache
             </a>
           </h1>
           <ClientContext>
             <header className={styles.header}>
               <div className={styles.logo}>
                 <a
-                  href="https://github.com/denisso/next13-app-exp/tree/server-fetch"
+                  href="https://github.com/denisso/next13-app-exp/tree/server-fetch-custom-cache"
                   className="imageLink"
                   rel="noreferrer"
                   target="_blank"
