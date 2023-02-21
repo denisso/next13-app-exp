@@ -1,3 +1,7 @@
+[Example Context uses](https://beta.nextjs.org/docs/api-reference/file-conventions/loading)
+
+[Online Demo](https://next13-app-exp-templates-git-loading-denisso.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

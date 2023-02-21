@@ -30,6 +30,11 @@ export default function RootLayout({
       <head />
       <body>
         <header className={styles.header}>
+          <h1>
+            <a href="https://beta.nextjs.org/docs/rendering/server-and-client-components#context">
+              Example Context
+            </a>
+          </h1>
           <div className={styles.logo}>
             <a
               href="https://github.com/denisso/next13-app-exp/tree/context"
