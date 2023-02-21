@@ -1,3 +1,9 @@
+[Dynamic Segments](https://beta.nextjs.org/docs/routing/defining-routes#dynamic-segments)
+
+[Online Demo](https://next13-app-exp-templates-git-router-dynamic-denisso.vercel.app/)
+
+[issue](https://github.com/vercel/next.js/issues/45939) and [discussion](https://github.com/vercel/next.js/discussions/45927)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

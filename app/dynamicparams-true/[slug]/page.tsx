@@ -7,10 +7,6 @@ export async function generateStaticParams() {
 }
 
 export default function PageComponent(props: TProps) {
-  if (Number(props.params.slug) > 2) {
-    notFound();
-  }
-  
   return <Page {...props} />;
 }
 
