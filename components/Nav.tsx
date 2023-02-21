@@ -16,21 +16,21 @@ export const Nav = () => {
       router.push(`${window.location.origin}/${e.target.value}`);
     });
   };
-
+  React.useEffect(() => {
+    context?.setPending(isPending);
+  }, [isPending, context]);
   return (
-    
-      <div className={styles.nav}>
-        Choose User ID
-        <select
-          onChange={handleChange}
-          value={context?.id}
-          {...(isPending ? { disabled: true } : {})}
-        >
-          {arr.map((e) => (
-            <option key={e}>{e}</option>
-          ))}
-        </select>
-      </div>
-
+    <div className={styles.nav}>
+      Choose User ID
+      <select
+        onChange={handleChange}
+        value={context?.id}
+        {...(isPending ? { disabled: true } : {})}
+      >
+        {arr.map((e) => (
+          <option key={e}>{e}</option>
+        ))}
+      </select>
+    </div>
   );
 };
