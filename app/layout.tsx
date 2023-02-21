@@ -29,8 +29,12 @@ export default function RootLayout({
       <head />
       <body>
         <div className={styles.container}>
-          <h1>Layout Content</h1>
-          <Nav/>
+          <h1>
+            <a href="https://beta.nextjs.org/docs/api-reference/file-conventions/loading">
+              Example uses loading.js
+            </a>
+          </h1>
+          <Nav />
           <div>{children}</div>
         </div>
       </body>
