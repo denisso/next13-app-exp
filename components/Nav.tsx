@@ -18,17 +18,19 @@ export const Nav = () => {
   };
 
   return (
-    <div className={styles.nav}>
-      Choose User ID
-      <select
-        onChange={handleChange}
-        value={context?.id}
-        {...(isPending ? { disabled: true } : {})}
-      >
-        {arr.map((e) => (
-          <option key={e}>{e}</option>
-        ))}
-      </select>
-    </div>
+    
+      <div className={styles.nav}>
+        Choose User ID
+        <select
+          onChange={handleChange}
+          value={context?.id}
+          {...(isPending ? { disabled: true } : {})}
+        >
+          {arr.map((e) => (
+            <option key={e}>{e}</option>
+          ))}
+        </select>
+      </div>
+
   );
 };
