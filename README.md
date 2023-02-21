@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Example Streaming and Suspense](https://beta.nextjs.org/docs/data-fetching/streaming-and-suspense)
+
+[Online Demo](https://next13-app-exp-templates-git-suspense-denisso.vercel.app/)
 
 ## Getting Started
 

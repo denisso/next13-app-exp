@@ -30,7 +30,7 @@ export default function RootLayout({
       <head />
       <body>
         <div className={styles.container}>
-          <h1>Example Suspense</h1>
+          <h1>Example Streaming and Suspense</h1>
           <ClientContext>
             <header className={styles.header}>
               <div className={styles.logo}>
