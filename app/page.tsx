@@ -1,3 +1,3 @@
 export default async function Home() {
-  return <div>Choose user</div>
+  return <div>Index page</div>
 }
