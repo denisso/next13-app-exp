@@ -1,3 +1,5 @@
+import { ClientComponent } from "@/components/ClientComponent"
+
 export default async function Home() {
-  return <div>Choose user</div>
+  return <ClientComponent id="/">Choose user</ClientComponent>
 }

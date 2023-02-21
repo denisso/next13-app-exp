@@ -1,25 +1,15 @@
-import "server-only";
+import moment from "moment";
 
 interface IfetchData {
-  (id: string): Promise<{ data: { [key: string]: any } }>;
+  (delay: number): Promise<{ data: string }>;
 }
 
-export const fetchData: IfetchData = (id) =>
+export const fetchData: IfetchData = (delay) =>
   new Promise(async (resolve) => {
-    let data = null;
-    try {
-      const response = await fetch("http://localhost:3001/users/" + id, {
-        next: { revalidate: false },
-        cache: "force-cache",
-      });
-      data = await response.json();
-    } catch (e) {
-      if (typeof e === "string") {
-        data = { error: e.toUpperCase() };
-      } else if (e instanceof Error) {
-        data = { error: e.message };
-      }
-    }
-
-    resolve({ data });
+    await new Promise((resolve) => setTimeout(resolve, delay * 1000));
+    resolve({
+      data: `Content loaded with a delay: ${delay} at the ${moment().format(
+        "MMMM Do YYYY, h:mm:ss a"
+      )}`,
+    });
   });
