@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "./template.module.scss";
 
 export default function template({children}:{children: React.ReactNode}) {
   return (
