@@ -34,13 +34,13 @@ export default function RootLayout({
               <Link href={"/"}>Home</Link>
             </div>
             <div className={styles.link}>
-              <Link href={"/blog"}>Blog</Link>
+              <Link href={"/streaming"}>Streaming</Link>
             </div>
             <div className={styles.link}>
-              <Link href={"/about"}>About</Link>
+              <Link href={"/redirect"}>Redirect</Link>
             </div>
             <div className={styles.link}>
-              <Link href={"/account"}>Account</Link>
+              <Link href={"/Goto Home"}>Account</Link>
             </div>
           </nav>
         </div>
