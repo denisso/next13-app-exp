@@ -30,7 +30,15 @@ export default function RootLayout({
       <head />
       <body>
         <div className={styles.container}>
-          <h1>Example Streaming and Suspense</h1>
+          <h1>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://beta.nextjs.org/docs/data-fetching/streaming-and-suspense"
+            >
+              Example Streaming and Suspense
+            </a>
+          </h1>
           <ClientContext>
             <header className={styles.header}>
               <div className={styles.logo}>
