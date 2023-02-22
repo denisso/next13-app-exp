@@ -1,0 +1,35 @@
+.header {
+  min-width: 300px;
+  width: 60%;
+  height: 200px;
+  margin: 2rem auto;
+  display: grid;
+  place-content: center;
+  font-size: 3rem;
+  background-color: cadetblue;
+}
+
+.topLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+
+  .image {
+    fill: #4040bf;
+    width: 100%;
+    height: auto;
+    &:hover {
+      fill: #2d2d86;
+    }
+  }
+}
