@@ -16,10 +16,12 @@ export const Nav = () => {
   }, [isPending, context]);
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const urlPath =
+      e.target.value === "/"
+        ? `${window.location.origin}`
+        : `${window.location.origin}/${context?.fetchSide}/${e.target.value}`;
     startTransition(() => {
-      router.push(
-        `${window.location.origin}/${context?.fetchSide}/${e.target.value}`
-      );
+      router.push(urlPath);
     });
   };
 
