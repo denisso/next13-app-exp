@@ -33,9 +33,9 @@ export default function RootLayout({
             <a
               rel="noreferrer"
               target="_blank"
-              href="https://beta.nextjs.org/docs/"
+              href="https://beta.nextjs.org/docs/routing/route-handlers"
             >
-              Example [Master]
+              Example Route Handlers
             </a>
           </h1>
           <header className={styles.header}>
@@ -64,13 +64,13 @@ export default function RootLayout({
                 <Link href={"/"}>Home</Link>
               </div>
               <div className={styles.link}>
-                <Link href={"/blog"}>Blog</Link>
+                <Link href={"/streaming"}>Streaming</Link>
               </div>
               <div className={styles.link}>
-                <Link href={"/about"}>About</Link>
+                <Link href={"/redirect"}>Redirect to Goto Home</Link>
               </div>
               <div className={styles.link}>
-                <Link href={"/account"}>Account</Link>
+                <Link href={"/gotohome"}>Goto Home</Link>
               </div>
             </nav>
           </header>
