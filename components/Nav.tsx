@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Nav.module.scss";
-import { Context } from "./ClientContext";
+import { Context, EFetchSide } from "./ClientContext";
 
 const arr = ["/", ...Array.from(Array(15), (x, index) => index + 1)];
 
@@ -11,14 +11,21 @@ export const Nav = () => {
   const context = React.useContext(Context);
   const [isPending, startTransition] = React.useTransition();
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    startTransition(() => {
-      router.push(`${window.location.origin}/${e.target.value}`);
-    });
-  };
   React.useEffect(() => {
     context?.setPending(isPending);
   }, [isPending, context]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    startTransition(() => {
+      router.push(
+        `${window.location.origin}/${context?.fetchSide}/${e.target.value}`
+      );
+    });
+  };
+
+  const handleChangeFetchSide = (e: React.ChangeEvent<HTMLInputElement>) => {
+    context?.setFetchSide(e.target.value as EFetchSide);
+  };
   return (
     <div className={styles.nav}>
       Choose User ID
@@ -31,6 +38,25 @@ export const Nav = () => {
           <option key={e}>{e}</option>
         ))}
       </select>
+      <div className={styles.clientServer}>
+        <span>Select</span>
+        <input
+          type="radio"
+          name="fetchside"
+          value={EFetchSide.server}
+          checked={context?.fetchSide === EFetchSide.server}
+          onChange={handleChangeFetchSide}
+        />
+        <span>server or</span>
+        <input
+          type="radio"
+          name="fetchside"
+          value={EFetchSide.client}
+          checked={context?.fetchSide === EFetchSide.client}
+          onChange={handleChangeFetchSide}
+        />
+        <span>client fetch function</span>
+      </div>
     </div>
   );
 };
