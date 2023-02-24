@@ -4,10 +4,12 @@ import { ClientComponent } from "@/components/ClientComponent";
 import { fetchData } from "@/lib/fetchData";
 
 export default function Page({ params }: { params: { id: string } }) {
-  const [data, setData] = React.useState("");
+  const [data, setData] = React.useState({});
   React.useEffect(() => {
-    fetchData(params?.id).then((data) => setData(data));
+    fetchData(window.location.origin + "/api/" + params?.id).then((data) =>
+      setData({...data})
+    );
   }, [params]);
 
-  return <ClientComponent id={params?.id}>{data}</ClientComponent>;
+  return <ClientComponent id={params?.id} data={data} />;
 }
