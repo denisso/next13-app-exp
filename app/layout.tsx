@@ -2,6 +2,7 @@ import "./globals.css";
 import styles from "./layout.module.scss";
 import { Nav } from "@/components/Nav";
 import { ClientContext } from "../components/ClientContext";
+import { ClientRootLayout } from "@/components/ClientRootLayout";
 
 /**
  * https://beta.nextjs.org/docs/guides/seo
@@ -41,9 +42,10 @@ export default function RootLayout({
           </h1>
           <ClientContext>
             <header className={styles.header}>
+              <ClientRootLayout />
               <div className={styles.logo}>
                 <a
-                  href="https://github.com/denisso/next13-app-exp/tree/server-fetch"
+                  href="https://github.com/denisso/next13-app-exp/tree/server-fetch-standalone"
                   className="imageLink"
                   rel="noreferrer"
                   target="_blank"

@@ -1,14 +1,10 @@
 "use client";
 import React from "react";
-
-export enum EFetchSide {
-  client = "client",
-  server = "server",
-}
+import { EFetchSide } from "./types";
 
 type TDataApp = {
-  client: { [id: string]: string };
-  server: { [id: string]: string };
+  client: { [id: string]: {value: string; count: number} };
+  server: { [id: string]: {value: string; count: number} };
 };
 
 interface IContexte {
@@ -26,6 +22,9 @@ interface IContexte {
   // client and server data
   data: TDataApp;
   setData: (data: TDataApp) => void;
+  //
+  timezoneOffset: number;
+  setTimezoneOffset: (timezoneOffset: number) => void;
 }
 
 export const Context = React.createContext<IContexte | null>(null);
@@ -37,6 +36,7 @@ export function ClientContext({ children }: { children: React.ReactNode }) {
     EFetchSide.server
   );
   const [data, setData] = React.useState({ client: {}, server: {} });
+  const [timezoneOffset, setTimezoneOffset] = React.useState(0);
   return (
     <Context.Provider
       value={{
@@ -48,6 +48,8 @@ export function ClientContext({ children }: { children: React.ReactNode }) {
         setFetchSide,
         data,
         setData,
+        timezoneOffset,
+        setTimezoneOffset,
       }}
     >
       {children}

@@ -2,7 +2,8 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Nav.module.scss";
-import { Context, EFetchSide } from "./ClientContext";
+import { Context } from "./ClientContext";
+import { EFetchSide } from "./types";
 
 const arr = ["/", ...Array.from(Array(15), (x, index) => index + 1)];
 
@@ -15,24 +16,30 @@ export const Nav = () => {
     context?.setPending(isPending);
   }, [isPending, context]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const pushUrlPath = ({ id, side }: { id?: string; side?: EFetchSide }) => {
+    if (!id || !side) return;
     const urlPath =
-      e.target.value === "/"
+      id === "/"
         ? `${window.location.origin}`
-        : `${window.location.origin}/${context?.fetchSide}/${e.target.value}`;
+        : `${window.location.origin}/${side}/${id}`;
     startTransition(() => {
       router.push(urlPath);
     });
   };
+  const handleChangeId = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    context?.setId(e.target.value);
+    pushUrlPath({ id: e.target.value, side: context?.fetchSide });
+  };
 
   const handleChangeFetchSide = (e: React.ChangeEvent<HTMLInputElement>) => {
     context?.setFetchSide(e.target.value as EFetchSide);
+    pushUrlPath({ id: context?.id, side: e.target.value as EFetchSide });
   };
   return (
     <div className={styles.nav}>
       Choose User ID
       <select
-        onChange={handleChange}
+        onChange={handleChangeId}
         value={context?.id}
         {...(isPending ? { disabled: true } : {})}
       >
@@ -48,6 +55,7 @@ export const Nav = () => {
           value={EFetchSide.server}
           checked={context?.fetchSide === EFetchSide.server}
           onChange={handleChangeFetchSide}
+          {...(isPending ? { disabled: true } : {})}
         />
         <span>server or</span>
         <input
@@ -56,6 +64,7 @@ export const Nav = () => {
           value={EFetchSide.client}
           checked={context?.fetchSide === EFetchSide.client}
           onChange={handleChangeFetchSide}
+          {...(isPending ? { disabled: true } : {})}
         />
         <span>client fetch function</span>
       </div>

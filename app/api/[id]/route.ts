@@ -4,5 +4,10 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
-  return NextResponse.json({ id: params.id, payload: Date.now() });
+  let payload = Date.now();
+  if (params.id === "gettimezoneoffset")
+    payload = new Date().getTimezoneOffset();
+  return NextResponse.json({ id: params.id, payload });
 }
+
+export const dynamic = "force-dynamic";

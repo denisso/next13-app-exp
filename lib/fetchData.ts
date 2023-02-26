@@ -1,7 +1,7 @@
 export type TData = Partial<{
   id: string;
   payload: string;
-  error: boolean;
+  error: boolean | string;
 }>;
 
 interface IfetchData {
@@ -17,7 +17,13 @@ export const fetchData: IfetchData = (url) =>
       });
       data = await response.json();
     } catch (e) {
-      data.error = true;
+      if (typeof e === "string") {
+        data.error = `error: ${e.toUpperCase()}`;
+      } else if (e instanceof Error) {
+        data.error = ` error: ${e.message}`;
+      } else {
+        data.error = true;
+      }
     }
 
     resolve(data);
