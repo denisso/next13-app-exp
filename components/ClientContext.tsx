@@ -2,10 +2,10 @@
 import React from "react";
 import { EFetchSide } from "./types";
 
-type TDataApp = {
-  client: { [id: string]: {value: string; count: number} };
-  server: { [id: string]: {value: string; count: number} };
-};
+// type TDataApp = {
+//   client: { [id: string]: {value: string; count: number} };
+//   server: { [id: string]: {value: string; count: number} };
+// };
 
 interface IContexte {
   // if you did not start working from the home page,
@@ -16,13 +16,15 @@ interface IContexte {
   // setting in Nav, uses in ClientComponent
   isPending: boolean;
   setPending: (pending: boolean) => void;
-  // choosing between the client and server fetch function
+  // choosing between the client and server fetch function, 
+  // setting radion (switch client/server) buttons in Nav component
+  // if starts not from home page, for example /client/1
   fetchSide: EFetchSide;
   setFetchSide: (side: EFetchSide) => void;
   // client and server data
-  data: TDataApp;
-  setData: (data: TDataApp) => void;
-  //
+  // data: TDataApp;
+  // setData: (data: TDataApp) => void;
+  // not implemented yet
   timezoneOffset: number;
   setTimezoneOffset: (timezoneOffset: number) => void;
 }
@@ -35,7 +37,7 @@ export function ClientContext({ children }: { children: React.ReactNode }) {
   const [fetchSide, setFetchSide] = React.useState<EFetchSide>(
     EFetchSide.server
   );
-  const [data, setData] = React.useState({ client: {}, server: {} });
+  // const [data, setData] = React.useState({ client: {}, server: {} });
   const [timezoneOffset, setTimezoneOffset] = React.useState(0);
   return (
     <Context.Provider
@@ -46,8 +48,8 @@ export function ClientContext({ children }: { children: React.ReactNode }) {
         setPending,
         fetchSide,
         setFetchSide,
-        data,
-        setData,
+        // data,
+        // setData,
         timezoneOffset,
         setTimezoneOffset,
       }}

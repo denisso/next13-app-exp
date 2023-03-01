@@ -1,6 +1,6 @@
 export type TData = Partial<{
   id: string;
-  payload: string;
+  payload: number;
   error: boolean | string;
 }>;
 
@@ -13,14 +13,15 @@ export const fetchData: IfetchData = (url) =>
     let data: TData = {};
     try {
       const response = await fetch(url, {
-        cache: "force-cache",
+        next: { revalidate: 60 },
+        // cache: "force-cache",
       });
       data = await response.json();
     } catch (e) {
       if (typeof e === "string") {
-        data.error = `error: ${e.toUpperCase()}`;
+        data.error = e;
       } else if (e instanceof Error) {
-        data.error = ` error: ${e.message}`;
+        data.error = JSON.stringify(e);
       } else {
         data.error = true;
       }

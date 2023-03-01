@@ -37,9 +37,10 @@ export default function RootLayout({
               target="_blank"
               href="https://beta.nextjs.org/docs/api-reference/fetch"
             >
-              Example Server Fetch
+              Example Client and Server Fetch
             </a>
           </h1>
+          <div>fetch( url, {`{ next: { revalidate: 60 } }`})</div>
           <ClientContext>
             <header className={styles.header}>
               <ClientRootLayout />
