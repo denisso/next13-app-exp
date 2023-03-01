@@ -7,7 +7,6 @@ export const fetchData: IfetchData = (id) =>
     let data = "";
     try {
       const response = await fetch("http://localhost:3001/users/" + id, {
-        // next: { revalidate: false },
         cache: "force-cache",
       });
       data = JSON.stringify(await response.json());
