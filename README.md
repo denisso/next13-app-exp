@@ -1,4 +1,4 @@
-[Example server fetch](https://beta.nextjs.org/docs/api-reference/fetch)
+[Function fetch docs](https://beta.nextjs.org/docs/api-reference/fetch)
 
 [Online demo](https://next13-app-exp-templates-git-server-fetch-standalone-denisso.vercel.app/)
 
