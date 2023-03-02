@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #007efd;
+  transition: background-color 0.1s;
+  &:hover,
+  &.active {
+    background-color: #003d7a;
+  }
+  &[disabled] {
+    background-color: gray;
+  }
+  border: none;
+}
+
+.itemNav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttonNav {
+  @extend .button;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+}

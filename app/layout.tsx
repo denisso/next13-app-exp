@@ -1,5 +1,5 @@
 import "./globals.css";
-import Link from "next/link";
+import { Nav } from "@/components/Nav";
 import styles from "./layout.module.scss";
 
 /**
@@ -33,15 +33,15 @@ export default function RootLayout({
             <a
               rel="noreferrer"
               target="_blank"
-              href="https://beta.nextjs.org/docs/"
+              href="https://beta.nextjs.org/docs/api-reference/segment-config"
             >
-              Example [Master]
+              Example uses static and dynamic segments
             </a>
           </h1>
           <header className={styles.header}>
             <div className={styles.logo}>
               <a
-                href="https://github.com/denisso/next13-app-exp/tree/master"
+                href="https://github.com/denisso/next13-app-exp/tree/static-dynamic-segments"
                 className={styles.link}
                 rel="noreferrer"
                 target="_blank"
@@ -59,20 +59,7 @@ export default function RootLayout({
                 </svg>
               </a>
             </div>
-            <nav className={styles.nav}>
-              <div className={styles.link}>
-                <Link href={"/"}>Home</Link>
-              </div>
-              <div className={styles.link}>
-                <Link href={"/blog"}>Blog</Link>
-              </div>
-              <div className={styles.link}>
-                <Link href={"/about"}>About</Link>
-              </div>
-              <div className={styles.link}>
-                <Link href={"/account"}>Account</Link>
-              </div>
-            </nav>
+            <Nav/>
           </header>
         </div>
         <main className={styles.main}>{children}</main>
