@@ -2,7 +2,7 @@
 
 test option dynalic = force-dynamic / force-static
 
-[Online demo](https://next13-app-exp-templates-static-dynamic-segments-denisso.vercel.app/)
+[Online demo](https://multiple-root-layouts-git-static-dynamic-segments-denisso.vercel.app/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
