@@ -53,7 +53,7 @@ export const Nav = () => {
           className={styles.button}
           {...(isPending ? { disabled: true } : {})}
         >
-          Refresh current page
+          Refresh current segment
         </button>
       </div>
     </div>
