@@ -118,7 +118,7 @@ const CacheRevalidate: ICacheRevalidate = ({ data }) => {
   }, [timer]);
   return (
     <div className={styles.container}>
-      <button
+      <button className={styles.button}
         {...(isPending || isRevalidate ? { disabled: true } : {})}
         onClick={handleRevalidate}
       >

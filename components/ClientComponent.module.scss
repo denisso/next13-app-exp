@@ -5,12 +5,12 @@
   background-color: #72b9ff;
 }
 
-.container{
+.container {
   width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  .timer{
+  .timer {
     line-height: 2rem;
   }
 }
@@ -19,4 +19,22 @@
   &::first-letter {
     text-transform: capitalize;
   }
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #007efd;
+  transition: background-color 0.1s;
+  &:hover {
+    background-color: #0066cc;
+  }
+  &[disabled] {
+    background-color: gray;
+  }
+  border: none;
 }
