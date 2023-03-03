@@ -1,3 +1,10 @@
+Define env variables before run example:
+
+```
+VERCEL_URL=127.0.0.1:3000
+SCHEMA_URL=http://
+```
+
 [Function fetch docs](https://beta.nextjs.org/docs/api-reference/fetch)
 
 [Online demo](https://next13-app-exp-templates-git-server-fetch-standalone-denisso.vercel.app/)
