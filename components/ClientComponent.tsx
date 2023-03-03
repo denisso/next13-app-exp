@@ -138,10 +138,6 @@ interface IClientComponent {
 
 export const ClientComponent: IClientComponent = function ({ data, id, side }) {
   const context = React.useContext(Context);
-
-  React.useEffect(() => {
-    console.log("useEffect data?.payload: ", side, data?.payload);
-  }, [data, side]);
   
   React.useEffect(() => {
     // for setting elements in Nav component
