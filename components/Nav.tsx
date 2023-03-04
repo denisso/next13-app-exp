@@ -55,7 +55,7 @@ export const Nav = () => {
           value={EFetchSide.server}
           checked={context?.fetchSide === EFetchSide.server}
           onChange={handleChangeFetchSide}
-          {...(isPending ? { disabled: true } : {})}
+          {...(isPending || context?.id === "/" ? { disabled: true } : {})}
         />
         <span>server or</span>
         <input
@@ -64,7 +64,7 @@ export const Nav = () => {
           value={EFetchSide.client}
           checked={context?.fetchSide === EFetchSide.client}
           onChange={handleChangeFetchSide}
-          {...(isPending ? { disabled: true } : {})}
+          {...(isPending || context?.id === "/" ? { disabled: true } : {})}
         />
         <span>client fetch function</span>
       </div>
