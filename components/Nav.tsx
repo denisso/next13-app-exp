@@ -37,7 +37,7 @@ export const Nav = () => {
   };
   return (
     <div className={styles.nav}>
-      Choose User ID
+      Choose ID
       <select
         onChange={handleChangeId}
         value={context?.id}
