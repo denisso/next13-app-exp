@@ -1,5 +1,5 @@
 import { Page } from "@/components/Page";
 
-export default function Shop() {
+export default function Home() {
   return <Page headerText="Home"/>;
 }
