@@ -18,8 +18,7 @@ export const fetchData: IfetchData = (id) =>
         data = cache[id];
       } else {
         const response = await fetch("http://localhost:3001/users/" + id, {
-          next: { revalidate: false },
-          cache: "force-cache",
+          cache: "no-store",
         });
         data = JSON.stringify(await response.json());
         cache[id] = data;
